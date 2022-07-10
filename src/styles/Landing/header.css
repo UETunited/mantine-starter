@@ -1,0 +1,46 @@
+header {
+  position: absolute;
+  z-index: 99;
+}
+
+@media only screen and (max-width: 768px) {
+    header .content-desktop {
+      display: none;
+    }
+
+    header .content-mobile {
+      display: block;
+    }
+
+    header {
+    top: 30px;
+    left: 20px;
+    right: 20px;
+    }
+  }
+
+@media only screen and (min-width: 769px) {
+  header .content-desktop {
+    display: flex;
+  }
+
+  header .content-mobile {
+    display: none;
+  }
+
+  header {
+    top: 60px;
+    left: 60px;
+    right: 60px;
+  }
+}
+
+header .content-desktop {
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+}
+
+header .content-mobile {
+  float: right;
+}

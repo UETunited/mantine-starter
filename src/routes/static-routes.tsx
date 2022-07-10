@@ -1,11 +1,11 @@
 import Login from "../pages/auth/Login";
 import Register from "../pages/auth/Register";
-import Home from "../pages/Home";
+import Landing from "../pages/Landing";
 
 export default [
   {
     path: "/",
-    element: <Home />,
+    element: <Landing />,
   },
   {
     path: "/auth/login",

@@ -37,6 +37,6 @@ const Header = () => {
 
 export default Header;
 
-const redirectToLink = (link: string): void => {
+const redirectToLink = (link) => {
   window.open(link, "_blank");
 };

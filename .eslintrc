@@ -1,0 +1,33 @@
+{
+    "plugins": [
+      "react"
+    ],
+    "extends": [
+      "eslint:recommended", 
+      "plugin:react/recommended"
+    ],
+    "rules": {
+      "react/react-in-jsx-scope": "off",
+      "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }] //should add ".ts" if typescript project
+    },
+    "parserOptions": {
+      "ecmaVersion": 7,
+      "sourceType": "module",
+      "ecmaFeatures": {
+          "jsx": true
+      }
+    },
+    "env": {
+      "browser": true,
+      "node": true,
+      "es6": true
+    },
+    "settings": {
+      "import/resolver": {
+        "node": {},
+        "babel-module": {
+          "root": ["./src"]
+        }
+      }
+    }
+  }

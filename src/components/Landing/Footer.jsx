@@ -50,6 +50,6 @@ const Footer = () => {
 
 export default Footer;
 
-const redirectToLink = (link: string): void => {
+const redirectToLink = (link) => {
   window.open(link, "_blank");
 };

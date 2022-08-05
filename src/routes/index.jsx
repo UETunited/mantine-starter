@@ -7,7 +7,7 @@ const Router = (PrivateRoute, auth) => {
     ({
       Private,
       exact = true,
-      Layout = ({ children }) => <>{children}</>,
+      Layout = {},
       modules,
       Component,
       path,

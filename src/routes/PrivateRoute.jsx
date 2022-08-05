@@ -1,17 +1,22 @@
-import { Route, Redirect } from "react-router-dom";
-
-const PrivateRoute = (props) => {
+function PrivateRoutes() {
+  const match = useRouteMatch('/app');
+  let allowedRoutes = [];
+ 
+  if (isLoggedIn()) {
+    allowedRoutes = getAllowedRoutes(PrivateRoutesConfig);
+  } else {
+    return <Redirect to="/" />;
+  }
+ 
   return (
-    <Route
-      render={({ location }) =>
-        // eslint-disable-next-line react/prop-types
-        props.auth ? (
-          <props.element />
-        ) : (
-          <Redirect to={{ pathname: "/auth/login", state: { from: location } }} />
-        )
-      }
+   <>
+    <MapAllowedRoutes 
+      routes={allowedRoutes} 
+      basePath="/app" 
+      isAddNotFound 
     />
+   </>
   );
-};
-export default PrivateRoute;
+ }
+ 
+ export default PrivateRoutes;
